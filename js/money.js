@@ -33,6 +33,9 @@ document.getElementById("calculate-btn").addEventListener("click", function () {
   const balanceBeforeSaving = income - totalExpenses;
   setTextElementValueByID("total-expenses", totalExpenses);
   setTextElementValueByID("balance-before-saving", balanceBeforeSaving);
+  document.getElementById("savings-percentage").value=""
+  document.getElementById("saving-amount").innerText="0"
+  document.getElementById("remaining-balance").innerText="0"
   calculateButtonCount++
 });
 
