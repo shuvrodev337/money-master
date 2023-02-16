@@ -16,7 +16,7 @@ function getTextElementValueByID(elementID) {
 }
 
 //-----------------------//
-const calculateButtonCount=0;
+let calculateButtonCount=0;
 document.getElementById("calculate-btn").addEventListener("click", function () {
   const income = getInputValueByID("income-field");
   const foodExpense = getInputValueByID("food-expense");
