@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Money Master</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="text-center mt-5">
+      <h1 class="text-5xl font-bold">Money Master <span> 💰 </span></h1>
+    </header>
+    <main>
+      <section class="grid md:grid-cols-2 gap-6 mt-12 mx-auto w-3/4">
+        <div>
+          <img class="h-full w-full rounded" src="images/money-master1.png" alt="" />
+        </div>
+        <div class="bg-slate-200 rounded">
+          <h2 class="text-2xl text-center pt-8 font-medium">Income</h2>
+          <div class="income grid grid-cols-2 gap-y-2 mx-auto w-3/4 py-6">
+            <label for="income-field" class="text-center">Income</label>
+            <input id="income-field" class=" w-full p-1 pl-2 text-gray-90 rounded bg-slate-50 border-none shadow" type="text" />
+          </div>
+          <h2 class="text-2xl text-center font-medium">Expenses</h2>
+          <div class="expenses grid grid-cols-2 gap-y-4 mx-auto w-3/4 py-6">
+            <label for="food-expense" class="text-center">Food</label>
+            <input id="food-expense" class=" w-full p-1 pl-2 text-gray-90 rounded bg-slate-50 border-none shadow" type="text" />
+
+            <label for="rent-expense" class="text-center">Rent</label>
+            <input id="rent-expense"class=" w-full p-1 pl-2 text-gray-90 rounded bg-slate-50 border-none shadow" type="text" />
+
+            <label for="clothes-expense" class="text-center">Clothes</label>
+            <input id="clothes-expense" class=" w-full p-1 pl-2 text-gray-90 rounded bg-slate-50 border-none shadow" type="text" />
+          </div>
+          <div class="calculate-button text-center pt-8">
+            <button id="calculate-btn" class="bg-blue-400 px-12 py-3 rounded font-medium text-2xl text-white">Calculate</button>
+          </div>
+          <div class="expenses-balace py-5">
+            <h2 class="text-2xl text-center py-2 font-medium">Total Expenses: <span id="total-expenses">0</span></h2>
+            <h2 class="text-2xl text-center  font-medium">Balance: <span id="balance-before-saving">0</span></h2>
+          </div>
+          <div class="savings md:flex gap-2 w-3/4 mx-auto">
+            
+            <label for="savings-percentage" class="text-center text-2xl">Save</label>
+            <input id="savings-percentage"class=" w-full  pl-2 text-gray-90 rounded bg-slate-50 border-none shadow" type="text" />
+            <p class="text-2xl">%</p>
+            <button id="savings-button" class="bg-blue-400 px-6 py-1 rounded font-medium text-2xl text-white">Save</button>
+            
+          </div>
+          <div class="final-amount py-5">
+            <h2 class="text-2xl text-center py-2 font-medium">Saving Amount: <span id="saving-amount">0</span></h2>
+            <h2 class="text-2xl text-center font-medium">Remaining Balance: <span id="remaining-balance">0</span></h2>
+        </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/money.js"></script>
+  </body>
+</html>
