@@ -2,6 +2,10 @@
 function getInputValueByID(elementID) {
   const inputElement = document.getElementById(elementID);
   const inputElementString = inputElement.value;
+  if (isNaN(inputElementString)) {
+    alert("please type carefully")
+    return
+  }
   const inputValue = parseFloat(inputElementString);
   return inputValue;
 }
@@ -26,8 +30,9 @@ document.getElementById("calculate-btn").addEventListener("click", function () {
   if (totalExpenses > income) {
     alert("Cut your coat according to your cloth");
     return;
-  } else if (isNaN(totalExpenses)) {
-    alert("please fill up all boxes with valid numbers");
+  }
+   else if (isNaN(totalExpenses)) {
+    // alert("please fill up all boxes with valid numbers");
     return;
   }
   const balanceBeforeSaving = income - totalExpenses;
@@ -53,8 +58,9 @@ document.getElementById("savings-button").addEventListener("click", function () 
     if (remainingBalance < 0) {
       alert("Not Enough money to save");
       return;
-    } else if (isNaN(savingAmount)) {
-      alert("pls enter valid numbers");
+    }
+     else if (isNaN(savingAmount)) {
+    //   alert("pls enter valid numbers");
       return;
     }
     setTextElementValueByID("saving-amount", savingAmount);
